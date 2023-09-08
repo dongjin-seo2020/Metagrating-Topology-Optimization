@@ -2,7 +2,7 @@ close all
 clear all
 addpath('Functions')
 
-% Initialize optimization parameters
+% Initialize necessary parameters
 % Default values and descriptions found in 'Functions/Initialize.m'
 OptParm = Initialize();
 
@@ -30,5 +30,5 @@ OptParm.Optimization.Robustness.Weights = [.5 1 .5];
 % Plot efficiency history
 OptParm.Display.PlotEfficiency = 1;
 
-% Run optimizations
-optout = OptimizeDevice(OptParm)
+% Run one-step simulation
+out = OneSimulation(OptParm)
